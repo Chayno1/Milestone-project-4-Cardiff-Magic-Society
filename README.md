@@ -98,6 +98,32 @@ As an admin user I want to :
 - update latest news : to add new info and remove old to keep societ informed on the magic world.
 - update gallery : add new images to show current look and feel of society
 
+## Action Plan
+
+To achieve the requirements of the society I'm going to build a website consisting of 11 pages with 4 levels of access
+public , assoiciate , member and admin. Each level will have the appropriate pages hidden from them up to member which has access to all pages. Admin user will have member level access with the additional edit buttons to update relevant pages.
+
+website pages :
+
+- Home : will contain information about society and contact information
+- How to join : will contain information on how to join the society
+- Gallery : will contain images from society nights
+- Magician's for hire : Will contain adverts from members for their private performance services
+- sign in/ register : Where you can fill in form and sign up or sign in to the Society
+- Profile : Personal page for user once signed up to edit details, see purchase history, create advert
+- Latest News : containing latest magic world news
+- Shop : containing society products for sale
+- Library : containing videos of lectures from the society
+- Message Board : an open chat board for all members
+
+Public Access : Home, How to Join, Gallery, Magician's for Hire, sign in/register
+
+Assoiciate Member : Home, How to Join, Gallery, Magician's for Hire, sign in/register, Profile, Latest News, Shop
+
+Member : Home, How to Join, Gallery, Magician's for Hire, sign in/register, Profile, Latest News, Shop, Library,           Message Board
+
+Wbsite will be built using : 
+
 
 ## Design Layout
 
