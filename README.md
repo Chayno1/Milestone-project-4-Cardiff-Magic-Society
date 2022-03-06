@@ -63,12 +63,70 @@ Due to the nature of the society I have identified four different types of users
 - Member : A paid up member of the society
 - Admin Member : A member of the society who is in charge of updating calender and events
 
+Member access is the highest level of access with access to the whole website, next level down being assoiciate member then general public is the standard level for anyone accessing the site. Admin member is reserved for one or two society board members to easily update calender, gallery and latest news.
+
 #### General public
 
-- 
+As a general user I want to :
+- To understand what the society is about : So I know what its about
+- see visual representation of what the society is like : So I can get a feel for what it like
+- understand the process to join the society : So I know how to join
+- find a magician to hire : So I can hire entertinment for an event
+- see when the next meeting is : So I can attend
+- contact the society : To make enquires
+- sign up as a member : to join the society 
 
 #### Assoiciate Member
 
+As an assoiciate user I want to :
+- see latest news : so I know what is currently happening in the magic world
+- access the shop : so I can purchase magic goods
+- see my previous shop order : so I know what I have previously brought 
+
 #### Member
 
+As a member user I want to :
+- access to library : to see lectures I couldnt attend
+- put up an advertisement : to advertise my magic performance to the general public
+- edit my advert : to update my advert with my latest info
+- message group members : to chat with members outside of group meetings
+
 #### Admin Member
+
+As an admin user I want to :
+- update calender : to add, delete or make changes to up coming events
+- update latest news : to add new info and remove old to keep societ informed on the magic world.
+- update gallery : add new images to show current look and feel of society
+
+
+## Design Layout
+
+### Sketched Layout
+
+### Actual Layout
+
+
+## Code Structure
+
+
+
+## Coding Bugs
+
+### fixed 
+
+### unfixed
+
+
+## Testing 
+
+
+## Deployment
+
+
+## Credit 
+
+
+## Evaluation
+
+
+## Future Changes
