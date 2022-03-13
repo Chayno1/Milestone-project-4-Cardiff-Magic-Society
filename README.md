@@ -122,7 +122,8 @@ Assoiciate Member : Home, How to Join, Gallery, Magician's for Hire, sign in/reg
 
 Member : Home, How to Join, Gallery, Magician's for Hire, sign in/register, Profile, Latest News, Shop, Library,           Message Board
 
-Wbsite will be built using : 
+
+Website will be built using : 
 
 
 ## Design Layout
