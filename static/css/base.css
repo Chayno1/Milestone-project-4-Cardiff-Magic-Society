@@ -17,6 +17,14 @@ font-family: 'Alfa Slab One', cursive;
     text-shadow: 2px 2px 5px red;
 }
 
+#title_text_mobile {
+    font-family: 'Alfa Slab One', cursive ;
+    font-size: 70px;
+    color: green;
+    text-shadow: 2px 2px 5px red;
+}
+
+
 /*--------------------Navabar-------------------------- */
 
 nav {
@@ -24,8 +32,20 @@ nav {
 }
 
 
-/*---------------------Footer-------------------------- */
+/*---------------------media queries title-------------------------- */
 
-#icon {
-    text-align: center;
+
+
+@media screen and (min-width:831px) {
+    #title_text_mobile {
+        display: none;
+}
+    
+}
+
+@media screen and (max-width:831px) {
+    #title_text {
+        display: none;
+}
+    
 }
