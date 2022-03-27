@@ -35,8 +35,13 @@ nav {
 /*-----------------------home page images--------------------------*/
 
 #home_img1 {
-    color: blue;
-    font-size: 50px;
+    max-height: 170px;
+    max-width: auto;
+}
+
+#home_img2 {
+    max-height: 170px;
+    max-width: auto;
 }
 
 
