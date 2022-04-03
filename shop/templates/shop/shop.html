@@ -24,11 +24,11 @@
                       filter
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Cards</a></li>
-                      <li><a class="dropdown-item" href="#">Coins</a></li>
-                      <li><a class="dropdown-item" href="#">Books</a></li>
-                      <li><a class="dropdown-item" href="#">DVD's</a></li>
-                      <li><a class="dropdown-item" href="#">All Products</a></li>
+                      <li><a class="dropdown-item" href="{% url 'shop' %}?category=Cards">Cards</a></li>
+                      <li><a class="dropdown-item" href="{% url 'shop' %}?category=Coins">Coins</a></li>
+                      <li><a class="dropdown-item" href="{% url 'shop' %}?category=Books">Books</a></li>
+                      <li><a class="dropdown-item" href="{% url 'shop' %}?category=DVDs">DVD's</a></li>
+                      <li><a class="dropdown-item" href="{% url 'shop' %}?category=Cards,Coins,Books,DVDs">All Products</a></li>
                     </ul>
                   </div>
         <div class="col-md-8 col-lg-4 my-auto py-1 py-lg-0">
