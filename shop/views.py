@@ -7,7 +7,7 @@ from .models import Product, Category
 
 
 def shop(request):
-    """ A view to show all products, sorting and search queries """
+    """ A view to show all products and search queries """
 
     products = Product.objects.all()
     query = None
