@@ -50,27 +50,27 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="whatsonDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="{% url 'home' %}" id="whatsonDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 What's On
               </a>
               <ul class="dropdown-menu" aria-labelledby="whatsonDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Calender</a></li>
+                <li><a class="dropdown-item" href="{% url 'home' %}">Calender</a></li>
                 {% if request.user.is_authenticated %}
                 <li><a class="dropdown-item" href="#">Magic World News</a></li>
                 {% endif %}
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">How to join</a>
+              <a class="nav-link" href="{% url 'home' %}">How to join</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Gallery</a>
+              <a class="nav-link" href="{% url 'home' %}">Gallery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Hire a Magician</a>
+              <a class="nav-link" href="{% url 'home' %}">Hire a Magician</a>
             </li>
             <li class="nav-item dropdown">
               {% if request.user.is_authenticated %}
@@ -79,7 +79,7 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" href="{% url 'shop' %}">Shop</a></li>
-                <li><a class="dropdown-item" href="#">Library</a></li>
+                <li><a class="dropdown-item" href="{% url 'home' %}">Library</a></li>
               </ul>
             </li>
             {% endif %}
@@ -89,9 +89,9 @@
                 Profile
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">My Profile</a></li>
-                <li><a class="dropdown-item" href="#">Message</a></li>
-                <li><a class="dropdown-item" href="#">Signout</a></li>
+                <li><a class="dropdown-item" href="{% url 'home' %}">My Profile</a></li>
+                <li><a class="dropdown-item" href="{% url 'home' %}">Message</a></li>
+                <li><a class="dropdown-item" href="{% url 'home' %}">Signout</a></li>
                  {% if request.user.is_superuser %}
                 <li><a class="dropdown-item" href="#">Site Management</a></li>
                 {% endif %}
@@ -100,8 +100,8 @@
                   Sign in/Register
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Sign up</a></li>
-                  <li><a class="dropdown-item" href="#">Log In</a></li>
+                  <li><a class="dropdown-item" href="{% url 'home' %}">Sign up</a></li>
+                  <li><a class="dropdown-item" href="{% url 'home' %}">Log In</a></li>
                </ul>
                {% endif %}
             </li>
