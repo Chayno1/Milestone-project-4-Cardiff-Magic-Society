@@ -126,9 +126,25 @@
       </div>
     </nav>
   </div>
-    {% if messages %}
-        <div class="message-container"></div>
-    {% endif %}
+      {% if messages %}
+  <div class="message-container">
+      {% for message in messages %}
+          {% with message.level as level %}
+              {% if level == 40 %}
+                  {% include 'includes/toasts/toast_error.html' %}
+              {% elif level == 30 %}
+                  {% include 'includes/toasts/toast_warning.html' %}
+              {% elif level == 25 %}
+                  {% include 'includes/toasts/toast_success.html' %}
+              {% else %}
+                  {% include 'includes/toasts/toast_info.html' %}
+              {% endif %}
+          {% endwith %}
+      {% endfor %}
+  </div>
+{% endif %}
+       
+   
 
     {% block page_header %}
     {% endblock %}
@@ -173,6 +189,13 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     {% block postloadjs %}
+    <script type="text/javascript">
+      ﻿ var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+      ﻿ var toastList = toastElList.map(function(toastEl) {
+      ﻿ return new bootstrap.Toast(toastEl)
+      ﻿ });
+      ﻿ toastList.forEach(toast => toast.show());
+      ﻿</script>
     {% endblock %}
 
     
