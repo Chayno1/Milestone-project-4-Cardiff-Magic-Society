@@ -139,6 +139,12 @@ Website will be built using :
 
 ## Coding Bugs
 
+-title stuck fixed to top of screen
+- toasts x not working 
+ - subtotal code not working
+  <p class="my-0 small text-muted">${{ item.product.price | calc_subtotal:item.quantity }}</p> 
+                        
+
 ### fixed 
 
 ### unfixed
