@@ -27,7 +27,7 @@ def add_image(request):
     if request.method == 'POST':
         form = GalleryForm(request.POST, request.FILES)
         if form.is_valid():
-            product = form.save()
+            image = form.save()
             messages.success(request, 'Successfully added image!')
             return redirect(reverse('gallery'))
         else:
@@ -41,3 +41,16 @@ def add_image(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_image(request, name):
+    """ Delete an image from the gallery """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only site admin can do that.')
+        return redirect(reverse('home'))
+
+    #image = get_object_or_404(Gallery, pk=images.url_id)
+    #image.delete()
+    #messages.success(request, 'Image deleted!')
+  #  return redirect(reverse('gallery'))
