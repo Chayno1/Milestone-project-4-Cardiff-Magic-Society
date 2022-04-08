@@ -95,7 +95,7 @@
                 <li><a class="dropdown-item" href="{% url 'home' %}">Message</a></li>
                 <li><a class="dropdown-item" href="{% url 'account_logout' %}">Signout</a></li>
                  {% if request.user.is_superuser %}
-                <li><a class="dropdown-item" href="#">Site Management</a></li>
+                <li><a class="dropdown-item" href="{% url 'management' %}">Site Management</a></li>
                 {% endif %}
                 {% else %}
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
