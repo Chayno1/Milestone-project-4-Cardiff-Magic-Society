@@ -7,7 +7,7 @@ font-family: 'Alfa Slab One', cursive;
 */
 /*-------------------- Header -------------------------*/
 #title {
-    padding: 60px;
+    padding: 10px;
 }
 
 #title_text {
@@ -24,12 +24,6 @@ font-family: 'Alfa Slab One', cursive;
     text-shadow: 2px 2px 5px red;
 }
 
-
-/*--------------------Navabar-------------------------- */
-
-nav {
-    padding-top: 110;
-}
 
 
 /*-----------------------home page images--------------------------*/
