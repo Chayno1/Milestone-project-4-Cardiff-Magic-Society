@@ -10,22 +10,48 @@
             {% for img in images %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card">
-                        <a href="">
-                            <img class="card-img-top img-fluid gallery_img" src="{{ img.image.url }}" alt="club photos">
-                        </a>
+                        <img id="Img" class="card-img-top img-fluid gallery-img" src="{{ img.image.url }}" alt="club photos">
                     </div>
                     {% if request.user.is_superuser %}
                         <small class="ml-3">| 
-                            <a class="text-danger" href="{% url 'delete_image' %}">Delete</a>
+                            <a class="text-danger" href="{% url 'delete_image' img.id %}">Delete</a>
                         </small>
                     {% endif %}
                 </div>
                 
             {% endfor %}
+
+            <div id="galleryModal" class="gallery-modal">
+                <span class="gallery-modal-close">×</span>
+                <img src="{{ img.image.url }}" class="gallery-modal-content" id="galleryModalImage">
+                <div id="galleryModalCaption"></div>
+            </div>
         </div>
     </div>
 </div>
 
+<script>
+    window.onload = function() {
+        var modal = document.getElementById('galleryModal');
+        var modalImg = document.getElementById("galleryModalImage");
+        var captionText = document.getElementById("galleryModalCaption");
+
+        var images = document.getElementsByClassName('gallery-img');
+        for (let i = 0; i < images.length; i++) {
+            images[i].onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+
+        var span = document.getElementsByClassName("gallery-modal-close")[0];
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    }
+</script>
 
 
 {% endblock%}

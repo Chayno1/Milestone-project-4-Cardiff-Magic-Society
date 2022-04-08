@@ -44,13 +44,13 @@ def add_image(request):
 
 
 @login_required
-def delete_image(request, name):
+def delete_image(request, image_id):
     """ Delete an image from the gallery """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only site admin can do that.')
         return redirect(reverse('home'))
 
-    #image = get_object_or_404(Gallery, pk=images.url_id)
-    #image.delete()
-    #messages.success(request, 'Image deleted!')
-  #  return redirect(reverse('gallery'))
+    image = get_object_or_404(Gallery, pk=image_id)
+    image.delete()
+    messages.success(request, 'Image deleted!')
+    return redirect(reverse('gallery'))
