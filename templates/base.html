@@ -52,13 +52,13 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="{% url 'home' %}" id="whatsonDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="" id="whatsonDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 What's On
               </a>
               <ul class="dropdown-menu" aria-labelledby="whatsonDropdownMenuLink">
-                <li><a class="dropdown-item" href="{% url 'home' %}">Calender</a></li>
+                <li><a class="dropdown-item" href="{% url 'maintenance' %}">Calender</a></li>
                 {% if request.user.is_authenticated %}
-                <li><a class="dropdown-item" href="#">Magic World News</a></li>
+                <li><a class="dropdown-item" href="{% url 'maintenance' %}">Magic World News</a></li>
                 {% endif %}
               </ul>
             </li>
@@ -66,13 +66,13 @@
               <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'home' %}">How to join</a>
+              <a class="nav-link" href="{% url 'maintenance' %}">How to join</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'home' %}">Gallery</a>
+              <a class="nav-link" href="{% url 'maintenance' %}">Gallery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'home' %}">Hire a Magician</a>
+              <a class="nav-link" href="{% url 'maintenance' %}">Hire a Magician</a>
             </li>
             <li class="nav-item dropdown">
               {% if request.user.is_authenticated %}
@@ -92,7 +92,7 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
-                <li><a class="dropdown-item" href="{% url 'home' %}">Message</a></li>
+                <li><a class="dropdown-item" href="{% url 'maintenance' %}">Message</a></li>
                 <li><a class="dropdown-item" href="{% url 'account_logout' %}">Signout</a></li>
                  {% if request.user.is_superuser %}
                 <li><a class="dropdown-item" href="{% url 'management' %}">Site Management</a></li>
