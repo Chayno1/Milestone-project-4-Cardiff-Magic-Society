@@ -1,7 +1,13 @@
 from django.shortcuts import render
+from .models import Gallery
 
 # Create your views here.
+def all_images(request):
+    """ A view to show all images """
+    images = Gallery.objects.all()
 
-def gallery(request):
-    """A view to render gallery page"""
-    return render(request, 'gallery/gallery.html')
+    context = {
+        'images': images,
+    }
+
+    return render(request, 'gallery/gallery.html', context)

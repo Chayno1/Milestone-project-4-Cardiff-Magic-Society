@@ -192,3 +192,12 @@ nav {
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0;
+
+
+
+    /*---------------------Galley-------------------------- */
+
+    .gallery_img {
+        max-height: 40px;
+        
+    }
