@@ -41,6 +41,14 @@
                     <td>{{ event.description }}</td>
                     <td>{{ event.location }}</td>
                     <td>{{ event.open_to }}</td>
+                    {% if request.user.is_superuser %}
+                    <td> 
+                      <small class="ml-3">
+                          <a href="{% url 'edit_event' event.id %}">Edit</a> | 
+                          <a class="text-danger" href="{% url 'delete_event' event.id %}">Delete</a>
+                      </small>
+                  </td>
+                  {% endif %}
                 </tr>
               </tbody>
               {% endfor %}
