@@ -111,12 +111,12 @@
                         </table>
                     </div>
                 {% else %}
-                    <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'shop' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <p class="lead mb-5 font_style">Your bag is empty.</p>
+                    <a href="{% url 'shop' %}" class="btn btn-outline-danger rounded-0 btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="text-uppercase">Keep Shopping</span>
+                        <span class="text-uppercase font_style">Keep Shopping</span>
                     </a>
                 {% endif %}
             </div>
