@@ -17,7 +17,7 @@ def profile(request):
 
 
 def profile_info(request):
-    """ Display the user's profile. """
+    """ Display the user's order history and address. """
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':

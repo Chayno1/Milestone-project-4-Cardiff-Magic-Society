@@ -24,23 +24,20 @@
             <table class="table align-middle">
               <thead>
                 <tr>
-                 <td>Date</td>
-                 <td>Time</td>
-                 <td>Title</td>
-                 <td>Event</td>
-                 <td>Location</td>
-                 <td>Open to</td>
+                 <td>image</td>
+                 <td>Name</td>
+                 <td>description</td>
+                 <td>contact details</td>
                 </tr>                
               </thead>
-              {% for event in events %}
+              {% for advert in adverts %}
               <tbody>
                 <tr>  
-                    <td>{{ event.date }}</td>
-                    <td>{{ event.time }}</td>
-                    <td>{{ event.name }}</td>
-                    <td>{{ event.description }}</td>
-                    <td>{{ event.location }}</td>
-                    <td>{{ event.open_to }}</td>
+                    <td>{{ advert.image }}</td>
+                    <td>{{ advert.user }}</td>
+                    <td>{{ advert.description }}</td>
+                    <td>{{ advert.phone_number }} </td> 
+                    <td>{{ advert.website }} {{ advert.user }}</td>             
                     {% if request.user.is_superuser %}
                     <td> 
                       <small class="ml-3">

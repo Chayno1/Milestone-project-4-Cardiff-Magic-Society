@@ -1,3 +1,34 @@
 from django.db import models
-
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 # Create your models here.
+
+class Performer(models.Model):
+    """
+    A user profile model for maintaining default
+    delivery information and order history
+    """
+
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    phone_number = models.CharField(max_length=20, null=True, blank=True)
+    description = models.TextField()
+    website = models.CharField(max_length=80, null=True, blank=True)
+    website_2 = models.CharField(max_length=80, null=True, blank=True)
+    Display = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.user.username
+
+
+@receiver(post_save, sender=User)
+def create_or_update_performer(sender, instance, created, **kwargs):
+    """
+    Create or update the performer advert
+    """
+    if created:
+        Performer.objects.create(user=instance)
+    # Existing users: just save the profile
+    instance.performer.save()
