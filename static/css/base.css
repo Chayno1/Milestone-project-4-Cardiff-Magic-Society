@@ -14,6 +14,17 @@ font-family: 'Alfa Slab One', cursive;
     color: green !important;
     text-shadow: 2px 2px 5px red !important;
 }
+
+.white-1 {
+    color: #fff;
+    padding-bottom: 15rem;
+}
+
+.white-2 {
+    color: #fff;
+    padding-bottom: 8rem;
+}
+
 /*-------------------- Header -------------------------*/
 #title {
     padding: 10px;
