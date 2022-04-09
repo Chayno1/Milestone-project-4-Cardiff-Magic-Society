@@ -9,17 +9,27 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mb-4">Management</h2>
+            <h2 class="logo-font mb-12 font_style font_look" style="text-align: center;">Management</h2>
             <hr>
         </div>
     </div>
-    <div class="row">
+    <div class="row font_style">
         <div class="col-12 col-lg-6">
-            <a href="{% url 'add_product' %}" class="btn btn-danger btn-lg" tabindex="-1" role="button" aria-disabled="true">Add Product</a>
+          <div>
+            <a href="{% url 'add_image' %}" class="btn btn-outline-danger btn-sm font_style" tabindex="-1" role="button" aria-disabled="true">Add Image</a>
+            <p>Add an Image to the Gallery page</p>   
+          </div> 
+          <br> 
+          <div>
+            <a href="{% url 'add_product' %}" class="btn btn-outline-danger btn-sm font_style" tabindex="-1" role="button" aria-disabled="true">Add Product</a>
+            <p>Add a product to the shop</p>   
+          </div>  
         </div>
         <div class="col-12 col-lg-6">
-            <a href="{% url 'add_image' %}" class="btn btn-danger btn-lg" tabindex="-1" role="button" aria-disabled="true">Add Image</a> 
+            
+            
         </div>
     </div>
 </div>
+
 {% endblock%}
