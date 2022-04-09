@@ -30,4 +30,5 @@ urlpatterns = [
     path('management/', include('management.urls')),
     path('gallery/', include('gallery.urls')),
     path('calender/', include('calender.urls')),
+    path('magician/', include('magician.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

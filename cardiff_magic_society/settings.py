@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'management',
     'gallery',
     'calender',
+    'magician',
 
     # Other
     'crispy_forms',
