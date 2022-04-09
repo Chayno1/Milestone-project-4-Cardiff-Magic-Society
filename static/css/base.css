@@ -5,6 +5,10 @@
 /*font-family: 'Merienda', cursive;
 font-family: 'Alfa Slab One', cursive;
 */
+
+.font_style {
+    font-family: 'Merienda', cursive !important;
+}
 /*-------------------- Header -------------------------*/
 #title {
     padding: 10px;
