@@ -6,6 +6,8 @@
 font-family: 'Alfa Slab One', cursive;
 */
 
+/*---------------- font style for buttons----------------------------*/
+
 .font_style {
     font-family: 'Merienda', cursive !important;
 }
@@ -14,6 +16,8 @@ font-family: 'Alfa Slab One', cursive;
     color: green !important;
     text-shadow: 2px 2px 5px red !important;
 }
+
+/*---------------- blank space filling for maintenace page and log in page----------------------------*/
 
 .white-1 {
     color: #fff;
@@ -168,7 +172,7 @@ font-family: 'Alfa Slab One', cursive;
     color: white !important;
 }
 
-/* Allauth form formatting */
+/*----------------- Allauth form formatting--------------------- */
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */

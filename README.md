@@ -135,13 +135,29 @@ Django apps :
 - templates ------- contains base.html template for website, allauth, includes- toasts for website
 - Static----------- contains base.css for website
 
+#### templates/Base.html
 
+- is the main template for the website, it contains a title, navbar and footer which are used on every page throughout the site.
 
+#### static/css/base.css
+
+- contains primary css styling for the base.html and the website. The checkout app has its own css file for specfic features,(also has its own js as well).
+
+base.css structure :
+
+- font style for buttons
+- blank space filling for maintenace page and log in page
+- Header 
+- home page images
+- bootstrap toasts 
+- media queries title
+- Allauth form formatting
+- Galley
 
 
 ## Coding Bugs
 
--title stuck fixed to top of screen
+- title stuck fixed to top of screen
 - toasts x not working 
  - subtotal code not working
   <p class="my-0 small text-muted">${{ item.product.price | calc_subtotal:item.quantity }}</p> 
