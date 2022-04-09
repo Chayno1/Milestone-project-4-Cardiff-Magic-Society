@@ -20,9 +20,7 @@ A new functional website will give all members or anyone interested one location
 To find out what they want for the website I had a meeting with the society board members and general mebers about what they would like to see from a website for the club. The main reoccuring points were :
 
 - up to date calender on society upcoming events
-- a private disscussion space for members
 - mordern looking website which is easy to navigate
-- a members only section
 - up to date news on the magic world
 - access to magic shop
 - access to videos of past lectures
@@ -43,8 +41,6 @@ To incorporate what the society wants from a website I have broken down the requ
 - Profile : a private individual area for members to update their own information.
 - shop : to sell society product online
 - latest news : up to date news on magic in the wider world
-- Library : an archive of video media of past lectures 
-- Message Board : an online chat board for members to post messages to everyone in th group
 
 ### Design Needs
 
@@ -56,14 +52,11 @@ To incorporate what the society wants from a website I have broken down the requ
 
 ### User Needs
 
-Due to the nature of the society I have identified four different types of users who would be accessing the website each with their own user story:
+Due to the nature of the society I have identified three different types of users who would be accessing the website each with their own user story:
 
-- The General Public : Anyone browsing the internet, or looking for magic content
-- Assoiciate Member : Someone with an inerest in or performs magic but is not a society member
-- Member : A paid up member of the society
+- The General Public : Anyone browsing the internet, or looking for magic content/information
+- Assoiciate Member : Someone with a keen inerest in or performs magic,
 - Admin Member : A member of the society who is in charge of updating calender and events
-
-Member access is the highest level of access with access to the whole website, next level down being assoiciate member then general public is the standard level for anyone accessing the site. Admin member is reserved for one or two society board members to easily update calender, gallery and latest news.
 
 #### General public
 
@@ -82,14 +75,8 @@ As an assoiciate user I want to :
 - see latest news : so I know what is currently happening in the magic world
 - access the shop : so I can purchase magic goods
 - see my previous shop order : so I know what I have previously brought 
-
-#### Member
-
-As a member user I want to :
-- access to library : to see lectures I couldnt attend
 - put up an advertisement : to advertise my magic performance to the general public
 - edit my advert : to update my advert with my latest info
-- message group members : to chat with members outside of group meetings
 
 #### Admin Member
 
@@ -100,8 +87,8 @@ As an admin user I want to :
 
 ## Action Plan
 
-To achieve the requirements of the society I'm going to build a website consisting of 11 pages with 4 levels of access
-public , assoiciate , member and admin. Each level will have the appropriate pages hidden from them up to member which has access to all pages. Admin user will have member level access with the additional edit buttons to update relevant pages.
+To achieve the requirements of the society I'm going to build a website consisting of 11 pages with 3 levels of access
+public , assoiciate , admin. Each level will have the appropriate pages hidden from them up to member which has access to all pages. Admin user will have member level access with the additional edit buttons to update relevant pages.
 
 website pages :
 
@@ -113,17 +100,15 @@ website pages :
 - Profile : Personal page for user once signed up to edit details, see purchase history, create advert
 - Latest News : containing latest magic world news
 - Shop : containing society products for sale
-- Library : containing videos of lectures from the society
-- Message Board : an open chat board for all members
+
 
 Public Access : Home, How to Join, Gallery, Magician's for Hire, sign in/register
 
 Assoiciate Member : Home, How to Join, Gallery, Magician's for Hire, sign in/register, Profile, Latest News, Shop
 
-Member : Home, How to Join, Gallery, Magician's for Hire, sign in/register, Profile, Latest News, Shop, Library,           Message Board
+Admin member will have the ability to edit : Magician's for Hire,  Latest News, Shop, Gallery 
 
-
-Website will be built using : 
+Website will be built using : Django framework, Python, Javascript, CSS, HTML, MySQL
 
 
 ## Design Layout
@@ -134,6 +119,23 @@ Website will be built using :
 
 
 ## Code Structure
+
+Django apps :
+- bag -------------- contains html templates and models.py for shopping bag found in navbar under profiles
+- calender --------- contains html templates and models.py for calender and editing calender 
+- checkout --------- contains html templates and models.py for checkout and stripe payment system
+- gallery ---------- contains html templates and models.py for gallery and editing gallery
+- home ------------- contains html templates and models.py for home page, maintenance page and how to join page
+- magician --------- contains html templates and models.py for Hire a magician page, and editing
+- management ------- contains html template for site management page, which has edit button links to other apps
+- profiles --------- contains html templates and models.py for users profile page, and editing address/advert
+- shop-------------- contains html templates and models.py for shop and editing products
+
+- media ----------- contains images for the shop products
+- templates ------- contains base.html template for website, allauth, includes- toasts for website
+- Static----------- contains base.css for website
+
+
 
 
 
