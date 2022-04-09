@@ -9,6 +9,11 @@ font-family: 'Alfa Slab One', cursive;
 .font_style {
     font-family: 'Merienda', cursive !important;
 }
+
+.font_look {
+    color: green !important;
+    text-shadow: 2px 2px 5px red !important;
+}
 /*-------------------- Header -------------------------*/
 #title {
     padding: 10px;
