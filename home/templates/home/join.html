@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+<div class="container">
+  <br>
+  <div class="row font_style">
+    <h2>How to Join</h2>
+      <P>Firstly if you have a keen interest in magic and want to get more involved then you come to the right place!</P>
+      <p>Register <a href="{% url 'account_signup' %}">here</a>and get access to our online shop where you can buy magic tricks to learn</p>
+      <p>If want to know when and where to find us, check out our <a href="{% url 'calender' %}">calender</a> for open events for everyone</p>
+  </div>
+  <br>
+  <hr>
+  <br>
+  <div class="row font_style">
+    <div class="col">
+      <h2>Become a Member</h2>
+      <P>To become a member firstly you need to attend some of our open events that everyone can attend</P>
+      <p>When you are ready you then will do an audition for your membership</p>
+      <p>After the audition boardmembers will make a decision, if a pass then you will become a member of the society able to attend all events</p>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <br>
+  <div class="row font_style">
+    <div class="col">
+      <h2>What is the Audition?</h2>
+      <P>The audition is simply a 10 minute presentation/performance whereby you must perform a magic trick/tricks to a reasonable standard</P>
+      <p>It doesnt have to be overly complicated but also can not be a self working trick, a moderate standard of sleight of hand must be displayed</p>
+      <p>The audition is done in front of the club or if you would prefer to boardmembers only</p>
+
+    </div>
+  </div>
+</div>
+{% endblock%}

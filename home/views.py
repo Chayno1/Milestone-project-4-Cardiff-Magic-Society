@@ -11,3 +11,8 @@ def index(request):
 def maintenance(request):
     """A view to render maintenance page"""
     return render(request, 'home/maintenance.html')    
+
+
+def join(request):
+    """A view to render how to join page"""
+    return render(request, 'home/join.html')  
