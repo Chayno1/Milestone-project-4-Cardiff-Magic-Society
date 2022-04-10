@@ -10,7 +10,6 @@ class Performer(models.Model):
     delivery information and order history
     """
 
-    image = models.ImageField(null=True, blank=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     phone_number = models.CharField(max_length=20, null=True, blank=True)
     description = models.TextField()

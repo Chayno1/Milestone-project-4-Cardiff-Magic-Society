@@ -24,31 +24,22 @@
             <table class="table align-middle">
               <thead>
                 <tr>
-                 <td>image</td>
                  <td>Name</td>
                  <td>description</td>
                  <td>contact details</td>
+                 <td>Web Links</td>
                 </tr>                
               </thead>
               {% for advert in adverts %}
               {% if advert.Display == True %}
               <tbody>
                 <tr>  
-                    <td><img src="{{ advert.image }}" alt="performer image"></td>
                     <td>{{ advert.user }}</td>
                     <td>{{ advert.description }}</td>
                     <td>{{ advert.phone_number }} </td> 
-                    <td>{{ advert.website }} {{ advert.user }}</td>
+                    <td><a href="{{ advert.website }}">visit site</a> <a href="{{ advert.website_2 }}">visit site</a></td>
                     {% else %}
                     {% endif %}             
-                    {% if request.user.is_superuser %}
-                    <td> 
-                      <small class="ml-3">
-                          <a href="{% url 'edit_event' advert.id %}">Edit</a> | 
-                          <a class="text-danger" href="{% url 'delete_event' advert.id %}">Delete</a>
-                      </small>
-                  </td>
-                  {% endif %}
                 </tr>
               </tbody>
               {% endfor %}
