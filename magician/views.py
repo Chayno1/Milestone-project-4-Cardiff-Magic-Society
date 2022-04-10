@@ -13,11 +13,8 @@ def magician(request):
                  'adverts': adverts,
               }
 
-    for advert in adverts:
-        if advert.Display == False:
-            pass
-        else:
-            return render(request, 'magician/magic_hire.html', context)    
+   
+    return render(request, 'magician/magic_hire.html', context)    
 
 
 def edit_advert(request):

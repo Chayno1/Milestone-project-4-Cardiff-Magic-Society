@@ -31,13 +31,16 @@
                 </tr>                
               </thead>
               {% for advert in adverts %}
+              {% if advert.Display == True %}
               <tbody>
                 <tr>  
                     <td>{{ advert.image }}</td>
                     <td>{{ advert.user }}</td>
                     <td>{{ advert.description }}</td>
                     <td>{{ advert.phone_number }} </td> 
-                    <td>{{ advert.website }} {{ advert.user }}</td>             
+                    <td>{{ advert.website }} {{ advert.user }}</td>
+                    {% else %}
+                    {% endif %}             
                     {% if request.user.is_superuser %}
                     <td> 
                       <small class="ml-3">
