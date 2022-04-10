@@ -34,7 +34,7 @@
               {% if advert.Display == True %}
               <tbody>
                 <tr>  
-                    <td>{{ advert.image }}</td>
+                    <td><img src="{{ advert.image }}" alt="performer image"></td>
                     <td>{{ advert.user }}</td>
                     <td>{{ advert.description }}</td>
                     <td>{{ advert.phone_number }} </td> 
@@ -44,8 +44,8 @@
                     {% if request.user.is_superuser %}
                     <td> 
                       <small class="ml-3">
-                          <a href="{% url 'edit_event' event.id %}">Edit</a> | 
-                          <a class="text-danger" href="{% url 'delete_event' event.id %}">Delete</a>
+                          <a href="{% url 'edit_event' advert.id %}">Edit</a> | 
+                          <a class="text-danger" href="{% url 'delete_event' advert.id %}">Delete</a>
                       </small>
                   </td>
                   {% endif %}

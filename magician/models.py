@@ -10,7 +10,6 @@ class Performer(models.Model):
     delivery information and order history
     """
 
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     phone_number = models.CharField(max_length=20, null=True, blank=True)
@@ -22,13 +21,3 @@ class Performer(models.Model):
     def __str__(self):
         return self.user.username
 
-
-@receiver(post_save, sender=User)
-def create_or_update_performer(sender, instance, created, **kwargs):
-    """
-    Create or update the performer advert
-    """
-    if created:
-        Performer.objects.create(user=instance)
-    # Existing users: just save the profile
-    instance.performer.save()

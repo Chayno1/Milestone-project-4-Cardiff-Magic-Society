@@ -57,9 +57,6 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="whatsonDropdownMenuLink">
                 <li><a class="dropdown-item" href="{% url 'calender' %}">Calender</a></li>
-                {% if request.user.is_authenticated %}
-                <li><a class="dropdown-item" href="{% url 'maintenance' %}">Magic World News</a></li>
-                {% endif %}
               </ul>
             </li>
             <li class="nav-item">

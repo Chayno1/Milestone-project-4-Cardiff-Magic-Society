@@ -21,10 +21,11 @@
             </div>
         </div>
         <br>
+        {% if request.user == user.profile %}
         <div class="row">
             <div class="col-12 col-lg-6">
                 <p class="text-muted font_style">Advert Details</p>
-                <form class="mt-3" action="{% url 'edit_advert' advert.id %}" class="form mb-2" enctype="multipart/form-data">
+                <form class="mt-3" action="{% url 'add_hire' %}" method="POST" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form|crispy }}
                     <br>
@@ -38,8 +39,15 @@
                     <p>Enter your advert details in this form and</p>
                     <br>
                     <p>it will be displayed on the Magicians for hire page</p>
-                </div>
+                </div>    
             </div>   
         </div>
+        {% else %}
+        <div class="col-12 col-lg-6">
+            <p class="text-muted font_style">Already have an advert</p>
+                <a href="{% url 'maintenance'  %}" class="btn btn-outline-success btn-sm font_style">click here to edit add</a>
+            <br>
+        </div> 
+        {% endif%}
     </div>
 {% endblock %}
