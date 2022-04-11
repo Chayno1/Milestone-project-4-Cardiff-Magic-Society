@@ -1,0 +1,1 @@
+   web: gunicorn cardiff_magic_society.wsgi:application
