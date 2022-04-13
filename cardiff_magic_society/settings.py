@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['cardiff-magic-society.herokuapp.com', 'localhost']
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-Milestone-project-4-Cardiff-Magic-Society.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-Milestone-project-4-Cardiff-Magic-Society.gitpod.io'], [' https://cardiff-magic-society.herokuapp.com/']
 
 
 
