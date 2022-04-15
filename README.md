@@ -21,13 +21,12 @@ To find out what they want for the website I had a meeting with the society boar
 
 - up to date calender on society upcoming events
 - mordern looking website which is easy to navigate
-- up to date news on the magic world
 - access to magic shop
 - access to videos of past lectures
 - to advertise members private performnce services
 - how to join the society 
 - Gallery of photos taken at meetings
-- An easy to maintain website, easily updateable calender, gallery, news
+- An easy to maintain website, easily updateable calender, gallery, 
 
 ### Website Needs
 
@@ -128,6 +127,34 @@ Website will be built using : Django framework, Python, Javascript, CSS, HTML, M
 
 ### Actual Layout
 
+### Main Page View - large monitor
+
+<img src="media/readme_images/main.jpeg">
+
+### Main Page View - tablet
+
+<img src="media/readme_images/tablet.jpeg">
+
+### Main Page View - mobile
+
+<img src="media/readme_images/mobile.jpeg">
+
+
+### Navbar
+
+
+<img src="media/readme_images/navbar.jpeg">
+
+Navbar contains drop down menus for users to navigate around website, this is so new future features added to website can live inside a category easily and not disrupt layout of the page. Same navbar is on all pages so once users are familiar with this feature they can always navigate the site.
+Navbar collapses to a dropdown menu on smaller screen sizes
+
+
+### Footer
+
+<img src="media/readme_images/footer.jpeg">
+
+Simple plain footer with links to society's social media, same footer across all pages so at any point user can switch to social media accounts.
+
 
 ## Code Structure
 
@@ -178,25 +205,20 @@ base.css structure :
 
 ## Coding Bugs
 
-- title stuck fixed to top of screen
 - toasts x not working 
  - subtotal code not working
   <p class="my-0 small text-muted">${{ item.product.price | calc_subtotal:item.quantity }}</p> 
 - unable to connect static files to s3
 - s3 acl settings keep reverting
 - media files not uploading correctly to s3
-- email not working
+- media queries home not working
+- magic adverts not working
                         
 
-### fixed 
-
-### unfixed
-
-
-## Testing 
-
-
 ## Deployment
+
+
+## Testing
 
 
 ## Credit 
