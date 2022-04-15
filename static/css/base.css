@@ -156,14 +156,14 @@ font-family: 'Alfa Slab One', cursive;
 
 @media screen and (max-width:995px) {
     #home_img1 {
-        display: none;
+        display: none !important;
 }
     
 }
 
 @media screen and (max-width:995px) {
     #home_img2 {
-        display: none;
+        display: none !important;
 }
     
 }

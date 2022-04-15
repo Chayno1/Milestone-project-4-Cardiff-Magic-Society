@@ -171,6 +171,7 @@ base.css structure :
 - home page images
 - bootstrap toasts 
 - media queries title
+- media queries home page
 - Allauth form formatting
 - Galley
 
