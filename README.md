@@ -40,7 +40,6 @@ To incorporate what the society wants from a website I have broken down the requ
 - Magicians for hire : advertisements of magic services from members
 - Profile : a private individual area for members to update their own information.
 - shop : to sell society product online
-- latest news : up to date news on magic in the wider world
 
 ### Design Needs
 
@@ -82,7 +81,6 @@ As an assoiciate user I want to :
 
 As an admin user I want to :
 - update calender : to add, delete or make changes to up coming events
-- update latest news : to add new info and remove old to keep societ informed on the magic world.
 - update gallery : add new images to show current look and feel of society
 
 ## Action Plan
@@ -161,6 +159,10 @@ base.css structure :
 - toasts x not working 
  - subtotal code not working
   <p class="my-0 small text-muted">${{ item.product.price | calc_subtotal:item.quantity }}</p> 
+- unable to connect static files to s3
+- s3 acl settings keep reverting
+- media files not uploading correctly to s3
+- email not working
                         
 
 ### fixed 
