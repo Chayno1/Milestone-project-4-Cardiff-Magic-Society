@@ -151,6 +151,25 @@ font-family: 'Alfa Slab One', cursive;
 }
     
 }
+/*---------------------home page media queries---------------*/
+
+
+@media screen and (max-width:831px) {
+    #home_img1 {
+        display: none;
+}
+    
+}
+
+@media screen and (max-width:831px) {
+    #home_img2{
+        display: none;
+}
+    
+}
+
+/*-----------------------------------------------------*/
+
 
 .btt-link,
 .update-link,

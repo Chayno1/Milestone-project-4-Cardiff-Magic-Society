@@ -113,6 +113,19 @@ Website will be built using : Django framework, Python, Javascript, CSS, HTML, M
 
 ### Sketched Layout
 
+### Main Page View - large monitor
+
+<img src="media/readme_images/main_sketch.jpeg">
+
+### Main Page View - tablet
+
+<img src="media/readme_images/tablet_sketch.jpeg">
+
+### Main Page View - mobile
+
+<img src="media/readme_images/mobile_sketch.jpeg">
+
+
 ### Actual Layout
 
 
@@ -120,14 +133,23 @@ Website will be built using : Django framework, Python, Javascript, CSS, HTML, M
 
 Django apps :
 - bag -------------- contains html templates and models.py for shopping bag found in navbar under profiles
+templates - bag.html
 - calender --------- contains html templates and models.py for calender and editing calender 
+templates - calender.html  add_event.html   edit_event.html
 - checkout --------- contains html templates and models.py for checkout and stripe payment system
+templates - checkout.html checkout_success.html confirmation emails - confirmation_email_body.txt confirmation_email_subject.txt
 - gallery ---------- contains html templates and models.py for gallery and editing gallery
+templates - gallery.html  add_image.html
 - home ------------- contains html templates and models.py for home page, maintenance page and how to join page
+templates - index.html(home page)  join.html  maintenance.html  
 - magician --------- contains html templates and models.py for Hire a magician page, and editing
+templates - add_hire.html  edit_hire.html  magic_hire.html
 - management ------- contains html template for site management page, which has edit button links to other apps
+templates - mangement.html
 - profiles --------- contains html templates and models.py for users profile page, and editing address/advert
+templates - order_history.html  profile.html
 - shop-------------- contains html templates and models.py for shop and editing products
+templates - shop.html  add_product.html  product_detail.html  edit_product.html
 
 - media ----------- contains images for the shop products
 - templates ------- contains base.html template for website, allauth, includes- toasts for website
