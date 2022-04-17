@@ -1,5 +1,31 @@
 #Milestone Project 4 - Cardiff Magic Society
 
+
+## Contents
+
+ ## Project Aims and Design
+ <details>
+ <summary>click to expand</summary>
+
+ * ### [1.Project Aim](#project-aim)
+ * ### [2.Website features](#website-features)
+ * ### [3.Design Layout](#design-layout)
+ * ### [4.Code Structure](#code-structure)
+ * ### [5.Coding Bugs](#coding-bugs)
+ </details>
+
+ ## Deployment and Testing
+ <details>
+ <summary>click to expand</summary>
+
+ * ### [6.Deployment](#deployment)
+ * ### [7.Testing](#testing)
+ * ### [8.Credits](#credit)
+ * ### [9.Evaluation](#evaluation)
+ * ### [10.Future Changes](#future-changes)
+ </details>
+
+
 ## Project aim
 
 The aim of the project is to build a functional website for Cardiff Magic Society
@@ -82,6 +108,10 @@ As an admin user I want to :
 - update calender : to add, delete or make changes to up coming events
 - update gallery : add new images to show current look and feel of society
 
+
+## [Back to top](#contents)
+
+
 ## Action Plan
 
 To achieve the requirements of the society I'm going to build a website consisting of 11 pages with 3 levels of access
@@ -101,9 +131,9 @@ website pages :
 
 Public Access : Home, How to Join, Gallery, Magician's for Hire, sign in/register
 
-Assoiciate Member : Home, How to Join, Gallery, Magician's for Hire, sign in/register, Profile, Latest News, Shop
+Assoiciate Member : Home, How to Join, Gallery, Magician's for Hire, sign in/register, Profile, Shop
 
-Admin member will have the ability to edit : Magician's for Hire,  Latest News, Shop, Gallery 
+Admin member will have the ability to edit : Magician's for Hire, Shop, Gallery 
 
 Website will be built using : Django framework, Python, Javascript, CSS, HTML, MySQL
 
@@ -123,6 +153,9 @@ Website will be built using : Django framework, Python, Javascript, CSS, HTML, M
 ### Main Page View - mobile
 
 <img src="media/readme_images/mobile_sketch.jpeg">
+
+
+## [Back to top](#contents)
 
 
 ### Actual Layout
@@ -146,7 +179,8 @@ Website will be built using : Django framework, Python, Javascript, CSS, HTML, M
 <img src="media/readme_images/navbar.jpeg">
 
 Navbar contains drop down menus for users to navigate around website, this is so new future features added to website can live inside a category easily and not disrupt layout of the page. Same navbar is on all pages so once users are familiar with this feature they can always navigate the site.
-Navbar collapses to a dropdown menu on smaller screen sizes
+Navbar collapses to a dropdown menu on smaller screen sizes.
+Navbar code can be found in templates/base.html so it extends across every page of the website.
 
 
 ### Footer
@@ -154,41 +188,88 @@ Navbar collapses to a dropdown menu on smaller screen sizes
 <img src="media/readme_images/footer.jpeg">
 
 Simple plain footer with links to society's social media, same footer across all pages so at any point user can switch to social media accounts.
+Footer code can be found in templates/base.html so it extends across every page of the website.
 
+### Font style 
+
+- Choosen 3 different fonts to be used throughout the webeste
+- 'Alfa Slab One' to be used as title font
+- 'Merienda' to be used as subtitle and text throughout the site
+- Also standard font usd in areas in which its important for the user to be very clear on what they are reading/selecting. This is evident on website in situation lkie completing an order.
+
+### Website Colours
+
+- Colours choosen to use are based on the colours used for the society's badge, this is based on the coloues of the welsh flag. To keep in theme with this the colours used at varying shades are:
+- Green
+- Red
+- White
+- Also Black as with the fonts, used to be clear and easily seen by user.
+
+### Profile page layout
+
+- Profile page is layed out in such a way that there is space for future additional features to be easily added to page without disrupting or needing to change the page layout drastically..
+- The main row is split into two divs with one currently empty ready for additional features to be added.
+
+<img src="media/readme_images/profile.jpeg">
+
+### Site Management page layout
+
+- The management page, like the profile page is layed out in such a way that there is space for future additional features to be easily added to page without disrupting or needing to change the page layout drastically..
+- The main row is split into two divs with one currently empty ready for additional features to be added.
+
+<img src="media/readme_images/manage_page.jpeg">
+
+### Maintenance page
+
+- This page was created for situations when certain pages need to come down for whatever reason i.e maintenance. This page is located in the files in the home app as the home app is least likely app on site to require change or sufficent change that would disrupt service. home/templates/home/maintenance.html .
+
+<img src="media/readme_images/unavailiable.jpeg">
+
+
+## [Back to top](#contents)
 
 ## Code Structure
 
 Django apps :
-- bag -------------- contains html templates and models.py for shopping bag found in navbar under profiles
+- cardiff_magic_society - contains settings.py, urls.py wsgi.py asgi.py pycache and _init_.py for project.
+- bag -------------- contains html templates and models.py for shopping bag found in navbar under profiles.
 templates - bag.html
-- calender --------- contains html templates and models.py for calender and editing calender 
+- calender --------- contains html templates and models.py for calender and editing calender. 
 templates - calender.html  add_event.html   edit_event.html
-- checkout --------- contains html templates and models.py for checkout and stripe payment system
+- checkout --------- contains html templates and models.py for checkout and stripe payment system.
 templates - checkout.html checkout_success.html confirmation emails - confirmation_email_body.txt confirmation_email_subject.txt
-- gallery ---------- contains html templates and models.py for gallery and editing gallery
+- gallery ---------- contains html templates and models.py for gallery and editing gallery.
 templates - gallery.html  add_image.html
-- home ------------- contains html templates and models.py for home page, maintenance page and how to join page
+- home ------------- contains html templates and models.py for home page, maintenance page and how to join page.
 templates - index.html(home page)  join.html  maintenance.html  
-- magician --------- contains html templates and models.py for Hire a magician page, and editing
+- magician --------- contains html templates and models.py for Hire a magician page, and editing.
 templates - add_hire.html  edit_hire.html  magic_hire.html
-- management ------- contains html template for site management page, which has edit button links to other apps
+- management ------- contains html template for site management page, which has edit button links to other apps.
 templates - mangement.html
-- profiles --------- contains html templates and models.py for users profile page, and editing address/advert
+- profiles --------- contains html templates and models.py for users profile page, and editing address/advert.
 templates - order_history.html  profile.html
-- shop-------------- contains html templates and models.py for shop and editing products
+- shop-------------- contains html templates and models.py for shop and editing products.
 templates - shop.html  add_product.html  product_detail.html  edit_product.html
 
-- media ----------- contains images for the shop products
+- media ----------- contains images for the shop products.
 - templates ------- contains base.html template for website, allauth, includes- toasts for website
 - Static----------- contains base.css for website
+- requirements.txt - contains all installed files needed to run website.
 
 #### templates/Base.html
 
 - is the main template for the website, it contains a title, navbar and footer which are used on every page throughout the site.
 
+- In the base is also exta content blocks for any additional javascript or css needed for specific pages in the future as well as additional headings and page content.
+
+<img src="media/readme_images/extrabs.jpeg">
+
+- At the bottom is also the javascript need for the toasts, this to allow the toasts to function on all pages.
+<img src="media/readme_images/postjs_toast.jpeg">
+
 #### static/css/base.css
 
-- contains primary css styling for the base.html and the website. The checkout app has its own css file for specfic features,(also has its own js as well).
+- contains primary css styling for the base.html and the website. The checkout app has its own css file for specfic features,(also has its own js as well to handle the stripe payments).
 
 base.css structure :
 
@@ -203,19 +284,69 @@ base.css structure :
 - Galley
 
 
+## [Back to top](#contents)
+
+
+
 ## Coding Bugs
 
-- toasts x not working 
  - subtotal code not working
   <p class="my-0 small text-muted">${{ item.product.price | calc_subtotal:item.quantity }}</p> 
-- unable to connect static files to s3
-- s3 acl settings keep reverting
-- media files not uploading correctly to s3
-- media queries home not working
-- magic adverts not working
+
+### Issue - Media queries not working
+
+- Media queries in static/css/base.css are not being applied to home page when viewing website on screens small than 995px
+- On screens smaller than 995px the two pictures either side of society badge are suppose to disappear, this is not being applied.
+
+### Issue - Magic adverts unable to upload
+
+- When user is on profile page they have option to upload a magic services advert to the magician for hire page. This form is suppose to give users one advert posted on to magician for hire page.
+- First issue with this was form automatically displayed users name whether they had filled in form or not. To rectify this issue added a display button inital set to false, so users could toggle on and off if they want form displayed. fix did not work.
+- Tried to rewrite the view.py for page based on the code used for calender, this partly worked however it gave users the option to post multiple adverts which was not the aim of the page.
+- Next attempt was to fix this on the template with code serching to see if user already had an advert posted, this partly worked but would return that all users had an advert whether or not they actually did.
+- Spent 6 hours with online code institute tutor disccusing possible fixs for this code, In the end tutor said this was beyond what was covered in the lessons and not neccessary for project.
+- Issue is yet to be fixed,can only add adverts in the django admin, will continue to serch for solution, for now left page as is and implemented maintenance.html so that the website still flows and users dont run into errors.
+
+### Issue - Unable to connect static files from AWS S3 bucket to Heroku deployment
+
+- When deploying website static files were not uploading to the deployment.
+
+<img src="media/readme_images/dev_var.jpeg">
+
+### Issue fix 
+
+- Fixed this issue by adding a Development key to the environment variables
+
+### Issue - Media files not uploading correctly to S3
+
+- Once website was deployed images from the media file were not uploading on the website.
+
+### Issue fix
+
+- Using the add product and add image to gallery I re-uploaded images to website which saved them successfully in the S3 bucket and loaded them on the website as intended.
+
+### Issue - S3 acl setting keeps reverting
+
+- ACL settings on S3 bucket in AWS keeps changing seemingly by itself.
+<img src="media/readme_images/s3_issue.jpeg">
+
+- This issue seems to affect multiple elements on the website including javascript functionality, grand total and sub total functionality, image loading and web links.
+
+- Checked set up of bucket and re-run course lessons to make sure bucket was set up correctly
+- Checked that gitpod workspace connected to s3 which also connected to heroku properly.
                         
+### Issue fix
+
+- Can manually change setting on aws by logging in and changing it however it does revert back after a while, some object settings don't. However despite the settings reverting the majority of the websites functions remain fixed.
+
+<img src="media/readme_images/s3_issue_fix.jpeg">
+
+- Have emailed AWS regarding this situation and how to solve it
+- Currently awaiting a response back from aws regarding this issue
 
 ## Deployment
+
+## [Back to top](#contents)
 
 
 ## Testing
@@ -223,8 +354,43 @@ base.css structure :
 
 ## Credit 
 
+### Fonts
+Fonts from https://fonts.google.com/
+- @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+- @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Merienda:wght@700&display=swap');
+
+### Footer layout
+base structure for footer layout from: https://mdbootstrap.com/docs/standard/tools/builders/footer/
+
+### Icons 
+Icons used on website found at: https://fontawesome.com/
+
+### Navbar, calender/magician for hire table layout
+table and navbar was used from: https://getbootstrap.com/
+
+### Payment system
+the payment system used is stripe - https://stripe.com/gb
+
+### Static/media files storage
+static and media files were stored using S3 bucket at : https://aws.amazon.com/
+
+### Shop layout and basic function
+shop layout and basic function was based on lesson from boutique Ado project from code institute :https://codeinstitute.net/full-stack-software-development-diploma/
+
+
+### Deployment site
+
+Website deployed at: https://heroku.com 
+
+
+## [Back to top](#contents)
+
 
 ## Evaluation
 
 
 ## Future Changes
+
+
+
+## [Back to top](#contents)
