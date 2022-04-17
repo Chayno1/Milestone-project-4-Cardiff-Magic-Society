@@ -135,7 +135,7 @@ Assoiciate Member : Home, How to Join, Gallery, Magician's for Hire, sign in/reg
 
 Admin member will have the ability to edit : Magician's for Hire, Shop, Gallery 
 
-Website will be built using : Django framework, Python, Javascript, CSS, HTML, MySQL
+Website will be built using : Django framework, Python, Javascript, CSS, HTML, MySQLPostgres
 
 
 ## Design Layout
@@ -251,9 +251,9 @@ templates - order_history.html  profile.html
 - shop-------------- contains html templates and models.py for shop and editing products.
 templates - shop.html  add_product.html  product_detail.html  edit_product.html
 
-- media ----------- contains images for the shop products.
-- templates ------- contains base.html template for website, allauth, includes- toasts for website
-- Static----------- contains base.css for website
+- media ----------- contains images for the shop products, also readme_images - which contains images for README.md.
+- templates ------- contains base.html template for website, allauth, includes- toasts for website.
+- Static----------- contains base.css for website.
 - requirements.txt - contains all installed files needed to run website.
 
 #### templates/Base.html
@@ -283,15 +283,25 @@ base.css structure :
 - Allauth form formatting
 - Galley
 
+### Emails
 
+- set up an gmail account for the website, cardiffmagicsociety@gmail.com 
+- This was then linked up in cardiff_magic_society/settings.py as the default email in which all emails from the website are sent from.
 ## [Back to top](#contents)
 
 
 
 ## Coding Bugs
 
- - subtotal code not working
+### Issue - Subtotal and Grandtotal code not working
+
+ - subtotal code not working not working on shopping bag page or grandtotal working on checkout succes page
+ - Previously before deployment subtotal on shopping bag page and grandtotal on checkout success page was working, an error has developed somewhere during the deployment process.
+ - Previously befor deployment had issue with subtotal on checkout page, was removed as not critical as all over totals were working fine.
+ 
   <p class="my-0 small text-muted">${{ item.product.price | calc_subtotal:item.quantity }}</p> 
+
+  <img src="media/readme_images/grand_total_issue.jpeg">
 
 ### Issue - Media queries not working
 
@@ -301,9 +311,19 @@ base.css structure :
 ### Issue - Magic adverts unable to upload
 
 - When user is on profile page they have option to upload a magic services advert to the magician for hire page. This form is suppose to give users one advert posted on to magician for hire page.
+
+<img src="media/readme_images/advert_view.jpeg">
+
 - First issue with this was form automatically displayed users name whether they had filled in form or not. To rectify this issue added a display button inital set to false, so users could toggle on and off if they want form displayed. fix did not work.
+
+<img src="media/readme_images/adver_view2.jpeg">
+
 - Tried to rewrite the view.py for page based on the code used for calender, this partly worked however it gave users the option to post multiple adverts which was not the aim of the page.
 - Next attempt was to fix this on the template with code serching to see if user already had an advert posted, this partly worked but would return that all users had an advert whether or not they actually did.
+
+<img src="media/readme_images/advert_html.jpeg">
+
+
 - Spent 6 hours with online code institute tutor disccusing possible fixs for this code, In the end tutor said this was beyond what was covered in the lessons and not neccessary for project.
 - Issue is yet to be fixed,can only add adverts in the django admin, will continue to serch for solution, for now left page as is and implemented maintenance.html so that the website still flows and users dont run into errors.
 
@@ -346,10 +366,34 @@ base.css structure :
 
 ## Deployment
 
+My website is deployed on heroku -  https://cardiff-magic-society.herokuapp.com/
+
+How I deployed -
+
+1. Signed in on Heroku.com and created a new app called cardiff-magic-society
+2. I then signed in on AWS.com and created a S3 bucket to store my static and media files in.
+3. I then logged into IAM on aws.com and set up a user with access to the S3 bucket by creating policies to allow access.
+4. I then connected my bucket wth heroku putting the config vars and making sure the details were all correct and matched.
+5. I edited the apps config vars so they had the correct details and matched my projects details, this included aws_access__key_id, aws_access__secret_key, database_url,secret_key, Stripe_public_key, Stripe_secret_key, stripe_wh_secret, and setting use_aws variable to true.
+6. I then connected my github repository Chayno1/Milestone-project-4-cardiff-magic-society in the deploy method of the app
+7. In gitpod I created variables and built an if statement which instructs if not in development to save static files to S3 and to us postgress database.
+8. I then did a commit and push n gitpod which did a deployment automatically on heroku
+9. After successful deployment I opened live url to check website
+10. Rechecked live url and proceeded to test website.
+
+
+
 ## [Back to top](#contents)
 
 
 ## Testing
+
+### Test Website
+
+- To evaluate and test my project I broke the testing down into three categories;
+- Project objective test
+- Website Build test
+- Website function test
 
 
 ## Credit 
