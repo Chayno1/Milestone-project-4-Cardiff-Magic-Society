@@ -395,6 +395,26 @@ How I deployed -
 - Website Build test
 - Website function test
 
+### Project Objective Test
+
+- General public View
+- see calender
+- sign up and register
+- see how to join
+
+- Member View
+- log in
+- access shop
+- buy product
+- recieve email
+- see history purchase
+
+- Admin View
+- add products
+- add event
+- add to gallery
+- edit gallery
+- edit products
 
 ## Credit 
 
