@@ -303,6 +303,23 @@ base.css structure :
 
   <img src="media/readme_images/grand_total_issue.jpeg">
 
+### Issue fix 
+
+- Added subtotal calculation in bag app - templatetags/bag_tools.py.
+
+<img src="media/readme_images/bag_tools_code.jpeg">
+
+- Tested this through development port, this change also fixed grand total being displayed on checkout success.
+
+<img src="media/readme_images/subtotal_1.jpeg">
+
+<img src="media/readme_images/subtotal_2.jpeg">
+
+<img src="media/readme_images/grand_total_fix.jpeg">
+
+
+
+
 ### Issue - Media queries not working
 
 - Media queries in static/css/base.css are not being applied to home page when viewing website on screens small than 995px
