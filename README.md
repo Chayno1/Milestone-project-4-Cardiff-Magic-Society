@@ -126,15 +126,14 @@ website pages :
 - Magician's for hire : Will contain adverts from members for their private performance services
 - sign in/ register : Where you can fill in form and sign up or sign in to the Society
 - Profile : Personal page for user once signed up to edit details, see purchase history, create advert
-- Latest News : containing latest magic world news
 - Shop : containing society products for sale
 
 
 Public Access : Home, How to Join, Gallery, Magician's for Hire, sign in/register
 
-Assoiciate Member : Home, How to Join, Gallery, Magician's for Hire, sign in/register, Profile, Shop
+Member : Home, How to Join, Gallery, Magician's for Hire, sign in/register, Profile, Shop
 
-Admin member will have the ability to edit : Magician's for Hire, Shop, Gallery 
+Admin member will have the ability to edit : Magician's for Hire, Shop, Gallery and Calender
 
 Website will be built using : Django framework, Python, Javascript, CSS, HTML, MySQLPostgres
 
@@ -298,7 +297,7 @@ base.css structure :
 
  - subtotal code not working not working on shopping bag page or grandtotal working on checkout succes page
  - Previously before deployment subtotal on shopping bag page and grandtotal on checkout success page was working, an error has developed somewhere during the deployment process.
- - Previously befor deployment had issue with subtotal on checkout page, was removed as not critical as all over totals were working fine.
+ - Previously before deployment had issue with subtotal on checkout page, was removed as not critical as all over totals were working fine.
  
   <p class="my-0 small text-muted">${{ item.product.price | calc_subtotal:item.quantity }}</p> 
 
@@ -462,7 +461,7 @@ In each scenario I went through all the possible actions that user can perform o
 
 The primary view and function of the test I documented on a table displaying what features worked and which didn't.
 
-function | genral public | member | admin |
+Function | General Public | Member | Admin |
 ---------|---------------|--------|-------|
 view home page| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 view how to join| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
