@@ -325,6 +325,20 @@ base.css structure :
 - Media queries in static/css/base.css are not being applied to home page when viewing website on screens small than 995px
 - On screens smaller than 995px the two pictures either side of society badge are suppose to disappear, this is not being applied.
 
+<img src="media/readme_images/tablet_error.jpeg">
+
+<img src="media/readme_images/mobile_error.jpeg">
+
+### Issue fix 
+
+<img src="media/readme_images/mediaq_code.jpeg">
+
+- Removed !important tag from media queries in static/base.css . This was put there previously as media query was not working, however removing it has now worked.
+
+<img src="media/readme_images/tablet.jpeg">
+
+<img src="media/readme_images/mobile.jpeg">
+
 ### Issue - Magic adverts unable to upload
 
 - When user is on profile page they have option to upload a magic services advert to the magician for hire page. This form is suppose to give users one advert posted on to magician for hire page.
