@@ -116,7 +116,7 @@ As an admin user I want to :
 ## Action Plan
 
 To achieve the requirements of the society I'm going to build a website consisting of 11 pages with 3 levels of access
-public , assoiciate , admin. Each level will have the appropriate pages hidden from them up to member which has access to all pages. Admin user will have member level access with the additional edit buttons to update relevant pages.
+public , member , admin. Each level will have the appropriate pages hidden from them up to member which has access to all pages. Admin user will have member level access with the additional edit buttons to update relevant pages.
 
 website pages :
 
