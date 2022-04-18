@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
@@ -51,7 +52,7 @@
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
-                            
+                            <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
