@@ -507,6 +507,8 @@ view edit gallery| :x: | :x: | :heavy_check_mark: |
 edit gallery| :x: | :x: | :heavy_check_mark: |
 view edit product| :x: | :x: | :heavy_check_mark: |
 edit product| :x: | :x: | :heavy_check_mark: |
+Emails sent| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+Email has correct data| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 
 ### Website Build Test
