@@ -397,24 +397,43 @@ How I deployed -
 
 ### Project Objective Test
 
-- General public View
+General public View
 - see calender
 - sign up and register
 - see how to join
 
-- Member View
+ Member View
 - log in
 - access shop
 - buy product
 - recieve email
 - see history purchase
 
-- Admin View
+Admin View
 - add products
 - add event
 - add to gallery
 - edit gallery
 - edit products
+
+function | genral public | member | admin |
+---------|---------------|--------|-------|
+view home page| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+view how to join| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
+view calender| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+view how gallery| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+view sign in/register| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+view log in| :x: | :heavy_check_mark: | :heavy_check_mark: |
+view profile| :x: | :heavy_check_mark: | :heavy_check_mark: |
+view purchase history| :x: | :heavy_check_mark: | :heavy_check_mark: |
+view shopping bag| :x: | :heavy_check_mark: | :heavy_check_mark: |
+view shop| :x: | :heavy_check_mark: | :heavy_check_mark: |
+view product| :x: | :heavy_check_mark: | :heavy_check_mark: |
+view checkout| :x: | :heavy_check_mark: | :heavy_check_mark: |
+view site mangement | :x: | :x: | :heavy_check_mark: |
+view edit calender| :x: | :x: | :heavy_check_mark: |
+view edit gallery| :x: | :x: | :heavy_check_mark: |
+
 
 ## Credit 
 
