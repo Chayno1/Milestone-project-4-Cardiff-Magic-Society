@@ -79,7 +79,7 @@ To incorporate what the society wants from a website I have broken down the requ
 Due to the nature of the society I have identified three different types of users who would be accessing the website each with their own user story:
 
 - The General Public : Anyone browsing the internet, or looking for magic content/information
-- Assoiciate Member : Someone with a keen inerest in or performs magic,
+- Member : Someone with a keen inerest in or performs magic,
 - Admin Member : A member of the society who is in charge of updating calender and events
 
 #### General public
@@ -93,9 +93,9 @@ As a general user I want to :
 - contact the society : To make enquires
 - sign up as a member : to join the society 
 
-#### Assoiciate Member
+#### Member
 
-As an assoiciate user I want to :
+As a member user I want to :
 - see latest news : so I know what is currently happening in the magic world
 - access the shop : so I can purchase magic goods
 - see my previous shop order : so I know what I have previously brought 
@@ -107,6 +107,7 @@ As an assoiciate user I want to :
 As an admin user I want to :
 - update calender : to add, delete or make changes to up coming events
 - update gallery : add new images to show current look and feel of society
+- update online shop : add, delete or edit products availiable for purchase online
 
 
 ## [Back to top](#contents)
@@ -397,24 +398,69 @@ How I deployed -
 
 ### Project Objective Test
 
-General public View
-- see calender
-- sign up and register
-- see how to join
+This first part of testing is to check whether the current project matches up with the intial aims of the project. I have done this by going through the user stories and seeing if what the project offers the user is what was initally intended.
 
- Member View
-- log in
-- access shop
-- buy product
-- recieve email
-- see history purchase
+#### General public
 
-Admin View
-- add products
-- add event
-- add to gallery
-- edit gallery
-- edit products
+As a general user I want to :
+- To understand what the society is about : So I know what its about  :heavy_check_mark:
+- see visual representation of what the society is like : So I can get a feel for what it like :heavy_check_mark:
+- understand the process to join the society : So I know how to join :heavy_check_mark:
+- find a magician to hire : So I can hire entertinment for an event :heavy_check_mark:
+- see when the next meeting is : So I can attend :heavy_check_mark:
+- contact the society : To make enquires :heavy_check_mark:
+- sign up as a member : to join the society :heavy_check_mark:
+
+For the general user I think alll intial aims were achieved.
+
+- The home page contains some genral information about the society, as well as a contact number.
+- The how to join page informs the user how to join the society and how/where to register
+- The gallery provides a visual representation of what society nights look like
+- Magicians for hire provides details of availiable magic acts for hire
+- The calender gives details when meetings are on, what they are about and who can attend them
+- Sign/register page gives the user the opportunity to sign up to the society
+
+#### Member
+
+As a member user I want to :
+- access the shop : so I can purchase magic goods :heavy_check_mark:
+- see my previous shop order : so I know what I have previously brought  :heavy_check_mark:
+- put up an advertisement : to advertise my magic performance to the general public :x:
+- edit my advert : to update my advert with my latest info :x:
+
+For the member user most of the aims were achieved except for the magicians to hire section which still has an on going error. This is documented in the coding bugs section of this document.
+
+- access the shop : members can access the shop under magic in the navbar and explore products.
+- see my previous shop order : On their own profile page members can see their previous order history
+- put up an advertisement : for now members cant put up an advert, they are informed this feature is currently unavailable.
+- edit my advert : for now members cant edit their advert, they are informed this feature is currently unavailable.
+
+
+#### Admin Member
+
+As an admin user I want to :
+- update calender : to add, delete or make changes to up coming events :heavy_check_mark:
+- update gallery : add new images to show current look and feel of society :heavy_check_mark:
+- update online shop : add, delete or edit products availiable for purchase online :heavy_check_mark:
+- edit hire a magician : delete any unwanted adverts posted on the page by members :x:
+
+For the admin user most of the aims were achieved except for the magicians to hire section which still has an on going error. This is documented in the coding bugs section of this document.
+
+- update calender : admin can add events to calender on the site management page or edit/delete an event by going to the calender page and selecting the option.
+- update gallery :admin can add an image to the gallery on the site management page or delete an image by going to the gallery page and selecting the option.
+- update online shop : admin can add a product to the shop on the site management page or edit/delete a product by going to the shop page and clicking on a product then selecting the option.
+- edit hire a magician : This option is currently unavailiable due to on going issue documented in coding bugs.
+
+
+
+### Website Function Test
+
+This part of the test is to check the project in actual use, making sure pages load correctly and functions operate in the way that they should.
+
+To do this I accessed the website through the heroku site address it was deployed at https://cardiff-magic-society.herokuapp.com/ . I accessed it in three different ways to simulate the three types of user expected to use the website, general public, member and admin member.
+In each scenario I went through all the possible actions that user can perform or view. I repeated this proccess 3 times checking the website at 3 different screen sizes desktop, tablet and mobile.
+
+The primary view and function of the test I documented on a table displaying what features worked and which didn't.
 
 function | genral public | member | admin |
 ---------|---------------|--------|-------|
@@ -422,17 +468,35 @@ view home page| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 view how to join| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
 view calender| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 view how gallery| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-view sign in/register| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+view sign in/register| :heavy_check_mark: | :x: | :x: |
+register an account| :heavy_check_mark: | :x: | :x: |
+view magicians for hire| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 view log in| :x: | :heavy_check_mark: | :heavy_check_mark: |
 view profile| :x: | :heavy_check_mark: | :heavy_check_mark: |
 view purchase history| :x: | :heavy_check_mark: | :heavy_check_mark: |
+edit personal details| :x: | :heavy_check_mark: | :heavy_check_mark: |
+view edit advert| :x: | :x: | :x: |
+add advert| :x: | :x: | :x: |
 view shopping bag| :x: | :heavy_check_mark: | :heavy_check_mark: |
 view shop| :x: | :heavy_check_mark: | :heavy_check_mark: |
 view product| :x: | :heavy_check_mark: | :heavy_check_mark: |
+add product to bag| :x: | :heavy_check_mark: | :heavy_check_mark: |
 view checkout| :x: | :heavy_check_mark: | :heavy_check_mark: |
+purchase products| :x: | :heavy_check_mark: | :heavy_check_mark: |
 view site mangement | :x: | :x: | :heavy_check_mark: |
 view edit calender| :x: | :x: | :heavy_check_mark: |
+edit calender| :x: | :x: | :heavy_check_mark: |
+edit magicians for hire| :x: | :x: | :x: |
 view edit gallery| :x: | :x: | :heavy_check_mark: |
+edit gallery| :x: | :x: | :heavy_check_mark: |
+view edit product| :x: | :x: | :heavy_check_mark: |
+edit product| :x: | :x: | :heavy_check_mark: |
+
+
+### Website Build Test
+
+This part of the test is to check the code for the project, making sure code syntax and structure is correct, and operating in the way that it should.
+ 
 
 
 ## Credit 
