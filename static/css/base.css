@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Merienda:wght@700&display=swap');
 
 
-/*font-family: 'Merienda', cursive;
-font-family: 'Alfa Slab One', cursive;
-*/
 
 /*---------------- font style for buttons----------------------------*/
 
@@ -156,14 +153,14 @@ font-family: 'Alfa Slab One', cursive;
 
 @media screen and (max-width:995px) {
     #home_img1 {
-        display: none !important;
+        display: none;
 }
     
 }
 
 @media screen and (max-width:995px) {
     #home_img2 {
-        display: none !important;
+        display: none;
 }
     
 }
