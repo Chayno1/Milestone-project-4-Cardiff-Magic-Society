@@ -524,6 +524,7 @@ edit product| :x: | :x: | :heavy_check_mark: |
 Emails sent| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 Email has correct data| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
+From going through website testing all pages and features in different screen views I found all worked as expected except the edit/add magician for hire advert which the issue is documented in coding bugs section. The maintenance page explaining this page is currently unavailiable came up as expected.
 
 ### Website Build Test
 
