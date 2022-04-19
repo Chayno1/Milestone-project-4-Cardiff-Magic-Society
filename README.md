@@ -529,7 +529,33 @@ From going through website testing all pages and features in different screen vi
 ### Website Build Test
 
 This part of the test is to check the code for the project, making sure code syntax and structure is correct, and operating in the way that it should.
+
+#### Lighthouse test results
+
+I ran the google chrome lighthouse report to test the websites performnace and accessibility.
+I ran this several times on different pages to check the overall performance of the website.
+
+<img src="media/readme_images/lighthouse.jpeg">
+
+<img src="media/readme_images/lighthouse_join.jpeg">
+
+<img src="media/readme_images/lighthouse_gallery.jpeg">
+
+<img src="media/readme_images/lighthouse_cal.jpeg">
  
+<img src="media/readme_images/lighthouse_login.jpeg">
+
+
+ From the lighthouse test overall the performance of the website was good, the score dips on the gallery page due to the sizes of the images.
+
+#### CSS Test
+
+To test the css files on the website I put the website through an online css validator at https://jigsaw.w3.org/css-validator/ 
+
+<img src="media/readme_images/css_valid.jpeg">
+
+The results show only two errors in the css file
+
 
 
 ## Credit 

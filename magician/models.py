@@ -21,13 +21,5 @@ class Performer(models.Model):
         return self.user.username
 
 
-@receiver(post_save, sender=User)
-def create_or_update_performer(sender, instance, created, **kwargs):
-    """
-    Create or update the performer
-    """
-    if created:
-        Performer().objects.create(user=instance)
-    # Existing users: just save the profile
-    instance.performer.save()       
+ 
 
