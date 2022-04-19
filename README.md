@@ -554,7 +554,55 @@ To test the css files on the website I put the website through an online css val
 
 <img src="media/readme_images/css_valid.jpeg">
 
-The results show only two errors in the css file
+The results show only two errors on the website, However css is being applied as expected at present.
+
+#### HTML Test
+
+To test the HTML on the website I put the website through an online css validator at https://validator.w3.org/
+
+<img src="media/readme_images/html_check.jpeg">
+
+The results show only two warnings on the website.
+
+#### JavaScript test
+
+To test the JavaScript I put the JavaScript from bag, checkout, gallery and base.html and put it through a JavaScript checker at https://jshint.com/
+
+<img src="media/readme_images/base_js.jpeg">
+
+<img src="media/readme_images/gallery_js.jpeg">
+
+<img src="media/readme_images/stripe_js.jpeg">
+
+The report came back highlighting a few minor errors in each code, however the code is functioning as should at present.
+
+#### Python Test
+
+To test python code I went through all the python code and ran it through python checker at https://www.pythonchecker.com/
+
+<img src="media/readme_images/check_py.jpeg">
+
+<img src="media/readme_images/cal_py.jpeg">
+
+<img src="media/readme_images/cal_model_py.jpeg">
+
+<img src="media/readme_images/shop_py.jpeg">
+
+Running the code through this website found most python code scored around 90% with the lowest being 78% on the shop views.py
+
+Also ran a second test on the python files at http://pep8online.com/ 
+
+<img src="media/readme_images/pep_profile_py.jpeg">
+
+<img src="media/readme_images/pep_py2.jpeg">
+
+<img src="media/readme_images/pep_py3.jpeg">
+
+<img src="media/readme_images/pep_py4.jpeg">
+
+This test came back with minor errors within python code, eg spacing and white lines.
+
+### Testing Conclusion
 
 
 
