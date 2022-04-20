@@ -287,6 +287,8 @@ base.css structure :
 
 - set up an gmail account for the website, cardiffmagicsociety@gmail.com 
 - This was then linked up in cardiff_magic_society/settings.py as the default email in which all emails from the website are sent from.
+
+
 ## [Back to top](#contents)
 
 
@@ -318,7 +320,7 @@ base.css structure :
 <img src="media/readme_images/grand_total_fix.jpeg">
 
 
-
+## [Back to top](#contents)
 
 ### Issue - Media queries not working
 
@@ -339,6 +341,8 @@ base.css structure :
 
 <img src="media/readme_images/mobile.jpeg">
 
+## [Back to top](#contents)
+
 ### Issue - Magic adverts unable to upload
 
 - When user is on profile page they have option to upload a magic services advert to the magician for hire page. This form is suppose to give users one advert posted on to magician for hire page.
@@ -358,6 +362,8 @@ base.css structure :
 - Spent 6 hours with online code institute tutor disccusing possible fixs for this code, In the end tutor said this was beyond what was covered in the lessons and not neccessary for project.
 - Issue is yet to be fixed,can only add adverts in the django admin, will continue to serch for solution, for now left page as is and implemented maintenance.html so that the website still flows and users dont run into errors.
 
+## [Back to top](#contents)
+
 ### Issue - Unable to connect static files from AWS S3 bucket to Heroku deployment
 
 - When deploying website static files were not uploading to the deployment.
@@ -375,6 +381,8 @@ base.css structure :
 ### Issue fix
 
 - Using the add product and add image to gallery I re-uploaded images to website which saved them successfully in the S3 bucket and loaded them on the website as intended.
+
+## [Back to top](#contents)
 
 ### Issue - S3 acl setting keeps reverting
 
@@ -481,7 +489,7 @@ For the admin user most of the aims were achieved except for the magicians to hi
 - update online shop : admin can add a product to the shop on the site management page or edit/delete a product by going to the shop page and clicking on a product then selecting the option.
 - edit hire a magician : This option is currently unavailiable due to on going issue documented in coding bugs.
 
-
+## [Back to top](#contents)
 
 ### Website Function Test
 
@@ -526,6 +534,8 @@ Email has correct data| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_m
 
 From going through website testing all pages and features in different screen views I found all worked as expected except the edit/add magician for hire advert which the issue is documented in coding bugs section. The maintenance page explaining this page is currently unavailiable came up as expected.
 
+## [Back to top](#contents)
+
 ### Website Build Test
 
 This part of the test is to check the code for the project, making sure code syntax and structure is correct, and operating in the way that it should.
@@ -546,6 +556,8 @@ I ran this several times on different pages to check the overall performance of 
 <img src="media/readme_images/lighthouse_login.jpeg">
 
 
+## [Back to top](#contents)
+
  From the lighthouse test overall the performance of the website was good, the score dips on the gallery page due to the sizes of the images.
 
 #### CSS Test
@@ -563,6 +575,8 @@ To test the HTML on the website I put the website through an online css validato
 <img src="media/readme_images/html_check.jpeg">
 
 The results show only two warnings on the website.
+
+## [Back to top](#contents)
 
 #### JavaScript test
 
@@ -590,6 +604,8 @@ To test python code I went through all the python code and ran it through python
 
 Running the code through this website found most python code scored around 90% with the lowest being 78% on the shop views.py
 
+## [Back to top](#contents)
+
 Also ran a second test on the python files at http://pep8online.com/ 
 
 <img src="media/readme_images/pep_profile_py.jpeg">
@@ -602,9 +618,13 @@ Also ran a second test on the python files at http://pep8online.com/
 
 This test came back with minor errors within python code, eg spacing and white lines.
 
+- After running through these code checkers no major errors were found. Minor errors were found however at present these do not affect the functioning of the website.
+
 ### Testing Conclusion
 
+- Completing the testing finds no major issues with the website or website code. The website operates as expected and only major issues are those highlighted in coding bugs being the on going S3 bucket problem and the magicians for hire edit.
 
+## [Back to top](#contents)
 
 ## Credit 
 
@@ -637,13 +657,20 @@ shop layout and basic function was based on lesson from boutique Ado project fro
 Website deployed at: https://heroku.com 
 
 
-## [Back to top](#contents)
-
 
 ## Evaluation
 
+Overall the website currently achieves most of the aims set out at the start of the project. Although one feature is not fully functioning the website is still useable in its current state.
+The website function on all most common device sizes, giving the user the ability to access site anywhere with a device.
+The layout of the site management, profile page and navbar also gives future development of website the opportunity to add additional functions without distrupting or having to reorganise the layout of the website or navbar.
 
 ## Future Changes
+
+- Fix S3 bucket issue in coding bugs once got a response from amazon regarding this issue
+
+- Find suitable solution to magician advert add/edit page
+
+- Build a live chat forum for members to have live disscussions online
 
 
 
